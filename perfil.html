@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de ManuelDeveloper</title>
+
+    <meta name="description" content="Portafolio de ManuelDeveloper, un desarrollador web full stack">
+
+    <!-- Open graph -->
+     <meta property="og:title" content="Portafolio de ManuelDeveloper">
+     <!-- Descripcion de open graph-->
+     <meta property="og:description" content="Portafolio de ManuelDeveloper, un desarrollador web full stack">
+
+    <link rel="alternate" hreflang="es" href="https://www.manueldeveloper.com">
+    <link rel="canonical" href="https://www.manueldeveloper.com">
+
+    <meta name="robots" content="index, follow">
+    <!-- Theme color para navegadores móviles -->
+    <meta name="theme-color" content="#FF0000" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#CC0000" media="(prefers-color-scheme: dark)">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>Portafolio de ManuelDeveloper</h1>
+        <!-- nav es para el menu de navegacion -->
+        <nav>
+            <a href="#Experiencia">Experiencia</a>
+            <a href="#Proyectos">Proyectos</a><!-- # es para referenciar, enlace interno-->
+            <a href="#Contact">Contact</a>
+            <a href="https://www.youtube.com/watch?v=BCUHCYBwstI&list=RDkdmaKL0Mcns&index=2" 
+            target="_blank" rel="noreferrer">Video de Al2 </a><!-- target="_blank" es para abrir en una nueva pestaña-->
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- Sección de introducción -->
+        <section>
+            <p>Hola, soy ManuelDeveloper, un desarrollador web full stack</p>
+            <p>Soy un desarrollador web full stack con experiencia en HTML, CSS, JavaScript, React, Node.js, y MongoDB</p>
+        </section>
+
+        <!-- Sección de video: Relación de aspecto 16:9 (ancho:alto = 16:9) -->
+        <!-- Ejemplo: 1280x720, 1920x1080, 854x480. En DevTools puedes ver las dimensiones del video -->
+        <section>
+            <h2>Video de Presentación</h2>
+            <video width="854" height="480" autoplay muted loop src="video.mp4" controls>
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </section>
+
+        <!-- Audio de fondo (sin autoplay para mejor UX) -->
+        <section>
+            <audio loop src="audio.mp3" controls>
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </section>
+
+        <!-- Ejemplo de iframe: incrustar otro video o página web -->
+        <section>
+            <h2>Video Incrustado</h2>
+            <!-- iframe permite incrustar contenido externo -->
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/4t22HbGfbFU" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <!-- Ejemplo de Dialog: para mostrar mensajes de alerta o modales -->
+        <section>
+            <h2>Diálogo Interactivo</h2>
+            <button onclick="document.getElementById('miDialogo').showModal()">Abrir Diálogo</button>
+            <dialog id="miDialogo">
+                <p>Este es un mensaje de alerta usando el elemento &lt;dialog&gt;.</p>
+                <button onclick="document.getElementById('miDialogo').close()">Cerrar</button>
+            </dialog>
+        </section>
+
+        <!-- Sección de Experiencia -->
+        <section id="Experiencia">
+            <h2>Experiencia</h2>
+
+            <p>Tengo 10 años de experiencia en el desarrollo web</p>
+            <!-- Lista de experiencia -->
+                <ul>
+                    <li>Desarrollador web full stack</li>
+                    <li>Desarrollador web frontend</li>
+                    <li>Desarrollador web backend</li>
+                    <li>Desarrollador web database</li>
+                    <li>Desarrollador web DevOps</li>
+                    <li>Desarrollador web Cloud</li>
+                    <li>Desarrollador web Mobile</li>
+                    <li>Desarrollador web AI</li>
+                    <li>Desarrollador web Blockchain</li>
+                    <li>Desarrollador web Security</li>
+                    <li>Desarrollador web Performance</li>
+                    <li>Desarrollador web Accessibility</li>    
+                </ul>
+
+        </section>
+
+        <!-- Imagen de ejemplo -->
+        <section>
+            <img src="https://picsum.photos/200/300" alt="Imagen de ejemplo">
+        </section>
+
+        <!-- Sección de Proyectos -->
+        <section id="Proyectos">
+            <h2>Proyectos realizados</h2>
+            
+            <article>
+                <header>
+                    <h3>Sitio Web Corporativo</h3>
+                </header>
+                <p>Desarrollo de un sitio web con una interfaz amigable y moderna</p>
+                <footer>
+                    <small>Tecnología utilizada: HTML, CSS, React</small>
+                </footer>
+            </article>
+        </section>
+
+        <!-- Aside: Tecnologías favoritas -->
+        <aside>
+            <header>
+                <h3>Tecnologías Favoritas</h3>
+            </header>
+            <!-- Lista de tecnologias favoritas -->
+            <!-- con <ol> tenemos lista de tecnologías ordenadas -->
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+            </ol>
+        </aside>
+
+        <!-- Sección de Contacto -->
+        <section id="Contact">
+            <h2>Contacto</h2>
+            <form method="post" action="/">
+                <fieldset>
+                    <legend>Información personal</legend>
+
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Email" name="email" required>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" placeholder="Teléfono" name="telefono" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
+
+
+
+                </fieldset>
+
+                <input type="submit" value="Enviar">
+               
+                
+            </form>
+        </section>
+
+        <!-- Sección de detalles desplegables -->
+        <section>
+            <details>
+                <summary>¿Qué estudios tienes?</summary>
+                <p>Tengo estudios en la universidad de Harvard</p>
+            </details>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Copyright 2025 ManuelDeveloper</p>
+
+        <a href="mailto:manueldeveloper@gmail.com">Contactame</a>
+        <a href="tel:+573178520000">Llamame</a>
+        <a href="whatsapp://send?text=Hola, soy ManuelDeveloper">Whatsapp</a>
+    </footer>
+        
+
+</body>
+</html>
+
+

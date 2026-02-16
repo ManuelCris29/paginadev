@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolsa de empleo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <!-- 
+        <a>: Logo como enlace al inicio.
+        class="logo": Clase CSS para estilizar el logo.
+      -->
+      <div class="logo-container">
+        <!-- 
+          <div>: Contenedor para el logo (icono + texto).
+          class="logo-container": Clase para estilizar el contenedor del logo.
+        -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon">
+          <!-- 
+            <svg>: Icono de código para representar el logo de TalentDev.
+            class="logo-icon": Clase para estilizar el icono.
+            stroke="currentColor": Usa el color del texto del elemento padre.
+          -->
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M7 8l-4 4l4 4" />
+          <path d="M17 8l4 4l-4 4" />
+          <path d="M14 4l-4 16" />
+        </svg>
+        <h2>TalentDev</h2>
+        <!-- 
+          <h2>: Título de la marca, ahora debajo del icono.
+        -->
+      </div>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <a href="#">Inicio</a>
+      <a href="Empleos.html">Empleos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div>
+      <a href="#">Publicar un empleo</a>
+      <a href="#">Iniciar sesión</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="index-hero-section">
+      <img src="./portada.jpg" alt="Personas trabajando en una oficina">
+
+      <h1>Acelera tu carrera en tecnología</h1>
+      <p>Conecta con empresas top que buscan talento tech. Salarios competitivos, proyectos desafiantes y crecimiento real.</p>
+
+      <form role="search" class="index-search-form">
+        <div>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-search">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+          </span>
+
+          <input
+            required
+            type="text"
+            name="q"
+            placeholder="Buscar empleo por puesto o empresa"
+            aria-label="Buscar empleo"
+          >
+
+          <button type="submit">Buscar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="index-features-section">
+      <div>
+        <header>
+          <div>
+            <h2>¿Por qué TalentDev?</h2>
+            <button type="button" class="index-video-button" id="video-trigger" aria-label="Reproducir video" aria-describedby="video-description">
+              <!-- 
+                id="video-trigger": ID único para referenciar desde JavaScript.
+                aria-describedby: Asocia el botón con una descripción (mejora accesibilidad).
+              -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+            <span id="video-description" class="sr-only">Abre un video explicativo sobre TalentDev</span>
+            <!-- 
+              sr-only: Clase para ocultar visualmente pero mantener accesible para lectores de pantalla.
+            -->
+          </div>
+          <div>
+            <p>TalentDev es la principal bolsa de trabajo para desarrolladores. Conectamos a los desarrolladores con las mejores empresas del mundo.</p>
+          </div>
+        </header>
+
+        <footer>
+          <article class="index-feature-card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <h3>Encuentra el trabajo de tus sueños</h3>
+            <p>Busca miles de empleos de las mejores empresas de todo el mundo.</p>
+          </article>
+
+          <article class="index-feature-card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <h3>Conecta con las mejores empresas</h3>
+            <p>Conecta con empresas que están contratando en tu tecnología.</p>
+          </article>
+
+          <article class="index-feature-card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+            <h3>Obtén el salario que mereces</h3>
+            <p>Obtén el salario que mereces, con nuestra calculadora de salarios.</p>
+          </article>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <small>© 2025 TalentDev. Todos los derechos reservados.</small>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- MODAL DE VIDEO -->
+  <!-- ============================================ -->
+  <dialog id="video-modal" class="video-modal" aria-labelledby="video-modal-title">
+    <!-- 
+      <dialog>: Elemento HTML5 nativo para modales/diálogos.
+      Mejor que un div porque maneja automáticamente el foco y la accesibilidad.
+      id="video-modal": ID para referenciar desde JavaScript.
+      aria-labelledby: Asocia el modal con su título (accesibilidad).
+    -->
+    
+    <div class="video-modal-content">
+      <!-- 
+        <div>: Contenedor para el contenido del modal.
+        class="video-modal-content": Clase para estilizar el contenido.
+      -->
+      
+      <!-- Botón de cerrar -->
+      <button type="button" class="video-modal-close" aria-label="Cerrar video">
+        <!-- 
+          aria-label: Descripción del botón para lectores de pantalla.
+          Importante porque solo tiene un icono, no texto visible.
+        -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Icono X para cerrar -->
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Contenedor del video -->
+      <div class="video-wrapper">
+        <!-- 
+          <div>: Contenedor para el video con relación de aspecto.
+          class="video-wrapper": Mantiene la proporción del video responsive.
+        -->
+        <video 
+          id="talentdev-video" 
+          controls 
+          preload="metadata"
+          aria-label="Video explicativo de TalentDev"
+        >
+          <!-- 
+            <video>: Elemento HTML5 para reproducir videos.
+            controls: Muestra controles de reproducción (play, pause, volumen, etc.).
+            preload="metadata": Carga solo los metadatos (duración, dimensiones) sin descargar todo el video.
+            Esto mejora el rendimiento inicial de la página.
+            aria-label: Descripción del video para accesibilidad.
+          -->
+          <source src="videota.mp4" type="video/mp4">
+          <!-- 
+            <source>: Especifica la fuente del video.
+            src: Ruta al archivo de video.
+            type: Tipo MIME del video (ayuda al navegador a decidir si puede reproducirlo).
+          -->
+          <p>Tu navegador no soporta la reproducción de videos. 
+            <a href="videota.mp4">Descarga el video aquí</a>
+          </p>
+          <!-- 
+            Mensaje de fallback para navegadores que no soportan <video>.
+            También proporciona un enlace de descarga como alternativa.
+          -->
+        </video>
+      </div>
+    </div>
+
+    <!-- Overlay oscuro (backdrop) -->
+    <div class="video-modal-backdrop"></div>
+    <!-- 
+      <div>: Overlay oscuro detrás del modal.
+      Crea el efecto de "oscurecer" el fondo cuando el modal está abierto.
+      Mejora el contraste y enfoca la atención en el video.
+    -->
+  </dialog>
+
+  <!-- ============================================ -->
+  <!-- JAVASCRIPT PARA EL MODAL -->
+  <!-- ============================================ -->
+  <script src="video-modal.js" defer></script>
+  <!-- 
+    <script>: Etiqueta para incluir código JavaScript externo.
+    src="video-modal.js": Ruta al archivo JavaScript.
+    defer: Atributo que hace que el script se ejecute después de que el HTML esté completamente cargado.
+    
+    Ventajas de usar archivo externo:
+    - Separación de responsabilidades (HTML estructura, JS comportamiento)
+    - Mejor organización del código
+    - Reutilizable en otras páginas
+    - Mejor rendimiento (el navegador puede cachear el archivo)
+    - Más fácil de mantener y debuggear
+  -->
+
+</body>
+</html>

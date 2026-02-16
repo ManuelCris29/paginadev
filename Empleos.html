@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!-- 
+  DOCTYPE: Declara que este es un documento HTML5.
+  Es la primera línea obligatoria en cualquier documento HTML.
+-->
+<html lang="es">
+<!-- 
+  <html>: Elemento raíz del documento.
+  lang="es": Indica que el idioma principal es español (importante para accesibilidad y SEO).
+-->
+<head>
+  <!-- 
+    <head>: Contiene metadatos e información que no se muestra visualmente,
+    pero es crucial para el navegador y los motores de búsqueda.
+  -->
+  <meta charset="UTF-8">
+  <!-- 
+    charset: Define la codificación de caracteres (UTF-8 soporta todos los idiomas).
+    Sin esto, caracteres especiales como ñ, á, é pueden verse mal.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 
+    viewport: Configura cómo se muestra en dispositivos móviles.
+    width=device-width: El ancho se adapta al dispositivo.
+    initial-scale=1.0: Sin zoom inicial (escala 100%).
+  -->
+  <title>Empleos - TalentDev</title>
+  <!-- 
+    <title>: Aparece en la pestaña del navegador y en los resultados de búsqueda.
+    Importante para SEO y experiencia de usuario.
+  -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" type="module"></script>
+  <!-- 
+    <link>: Enlaza el archivo CSS externo.
+    rel="stylesheet": Indica que es una hoja de estilos.
+    href: Ruta al archivo CSS.
+  -->
+
+</head>
+
+<body>
+  <!-- 
+    <body>: Contiene todo el contenido visible de la página.
+    Aquí va todo lo que el usuario verá.
+  -->
+
+  <!-- ============================================ -->
+  <!-- PASO 1: HEADER MEJORADO -->
+  <!-- ============================================ -->
+  <header>
+    <!-- 
+      <header>: Elemento semántico HTML5 que representa la cabecera de la página.
+      Mejora la accesibilidad y el SEO al indicar claramente qué es.
+    -->
+
+    <!-- Logo como enlace al inicio -->
+    <a href="index.html" class="logo">
+      <!-- 
+        <a>: Elemento de enlace (anchor).
+        href="index.html": Ruta a la página de inicio.
+        class="logo": Clase CSS para estilizar el logo.
+      -->
+      <div class="logo-container">
+        <!-- 
+          <div>: Contenedor para el logo (icono + texto).
+          class="logo-container": Clase para estilizar el contenedor del logo.
+        -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon">
+          <!-- 
+            <svg>: Icono de código para representar el logo de TalentDev.
+            class="logo-icon": Clase para estilizar el icono.
+            stroke="currentColor": Usa el color del texto del elemento padre.
+          -->
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M7 8l-4 4l4 4" />
+          <path d="M17 8l4 4l-4 4" />
+          <path d="M14 4l-4 16" />
+        </svg>
+        <h1>TalentDev</h1>
+        <!-- 
+          <h1>: Título principal de la página, ahora debajo del icono.
+          Solo debe haber uno por página.
+        -->
+      </div>
+    </a>
+
+    <!-- Navegación principal -->
+    <nav aria-label="Navegación principal">
+      <!-- 
+        <nav>: Elemento semántico para menús de navegación.
+        aria-label: Describe el propósito del nav para lectores de pantalla (accesibilidad).
+      -->
+      <a href="Empleos.html" aria-current="page">Empleos</a>
+      <!-- 
+        aria-current="page": Indica que este es el enlace de la página actual.
+        Mejora la accesibilidad para usuarios con lectores de pantalla.
+      -->
+      <a href="#">Empresas</a>
+      <!-- 
+        href="#": Enlace temporal (no lleva a ningún lado aún).
+        El # es un placeholder común durante el desarrollo.
+      -->
+      <a href="#">Salarios</a>
+    </nav>
+
+    <!-- Icono de perfil -->
+    <button type="button" class="profile-button" aria-label="Abrir menú de perfil">
+      <!-- 
+        <button>: Botón interactivo.
+        type="button": Evita que se comporte como submit si está dentro de un form.
+        class="profile-button": Clase para estilizar.
+        aria-label: Descripción para accesibilidad (no hay texto visible, solo icono).
+      -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- 
+          <svg>: Gráficos vectoriales escalables (iconos).
+          xmlns: Define el namespace XML para SVG.
+          width/height: Dimensiones del icono.
+          viewBox: Define el sistema de coordenadas interno.
+          stroke: Color del trazo (currentColor usa el color del texto del elemento padre).
+        -->
+        <circle cx="12" cy="8" r="5"></circle>
+        <!-- Círculo para la cabeza del avatar -->
+        <path d="M20 21a8 8 0 0 0-16 0"></path>
+        <!-- Línea curva para el cuerpo del avatar -->
+      </svg>
+    </button>
+  </header>
+
+    <!-- ============================================ -->
+    <!-- PASO 2: HERO SECTION -->
+    <!-- ============================================ -->
+    <main>
+      <!-- 
+        <main>: Elemento semántico HTML5 que contiene el contenido principal de la página.
+        Solo debe haber uno por página. Mejora SEO y accesibilidad.
+      -->
+
+      <section class="empleos-hero-section">
+      <!-- 
+        <section>: Agrupa contenido temáticamente relacionado.
+        class="hero-section": Clase para estilizar esta sección específicamente.
+      -->
+
+      <!-- Título principal del hero -->
+      <h2>Encuentra tu próximo trabajo</h2>
+      <!-- 
+        <h2>: Subtítulo de nivel 2 (el h1 está en el header como logo).
+        Jerarquía: h1 > h2 > h3 > h4 > h5 > h6
+      -->
+
+      <!-- Subtítulo descriptivo -->
+      <p class="hero-subtitle">Explora miles de oportunidades en el sector tecnológico</p>
+      <!-- 
+        <p>: Párrafo de texto.
+        class="hero-subtitle": Clase específica para estilizar este subtítulo.
+      -->
+
+      <!-- Formulario de búsqueda -->
+      <form role="search" class="empleos-search-form">
+        <!-- 
+          <form>: Contenedor para elementos de formulario.
+          role="search": Indica que es un formulario de búsqueda (accesibilidad).
+          class="search-form": Clase para estilizar el formulario.
+        -->
+        <div class="empleos-search-container">
+          <!-- 
+            <div>: Contenedor genérico sin significado semántico.
+            Úsalo para agrupar elementos cuando no hay un elemento semántico apropiado.
+            class="empleos-search-container": Clase para el contenedor de búsqueda.
+          -->
+          <span class="empleos-search-icon" aria-hidden="true">
+            <!-- 
+              <span>: Elemento inline genérico (sin significado semántico).
+              aria-hidden="true": Oculta este elemento decorativo de los lectores de pantalla.
+            -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+            <!-- Icono de lupa SVG -->
+          </span>
+
+          <input
+            type="text"
+            name="search"
+            id="job-search"
+            placeholder="Buscar: Desarrollador, Diseñador, etc."
+            aria-label="Buscar empleos"
+            autocomplete="off"
+          >
+          <!-- 
+            <input>: Campo de entrada de texto.
+            type="text": Tipo de input (texto plano).
+            name="search": Nombre del campo (importante para formularios).
+            id="job-search": Identificador único (para asociar con <label>).
+            placeholder: Texto de ejemplo que desaparece al escribir.
+            aria-label: Descripción para accesibilidad (si no hay <label> visible).
+            autocomplete="off": Desactiva autocompletado del navegador.
+          -->
+        </div>
+      </form>
+
+      <!-- ============================================ -->
+      <!-- PASO 3: FILTROS -->
+      <!-- ============================================ -->
+      <div class="empleos-filters-container">
+        <!-- 
+          <div>: Contenedor para agrupar los botones de filtro.
+          class="filters-container": Clase para estilizar el contenedor de filtros.
+        -->
+        
+        <button type="button" class="empleos-filter-button" data-filter="tecnologia">
+          <!-- 
+            <button>: Botón interactivo para filtrar.
+            type="button": No envía formulario, solo ejecuta acción.
+            class="filter-button": Clase para estilizar todos los botones de filtro.
+            data-filter: Atributo personalizado para identificar el tipo de filtro (útil para JavaScript).
+          -->
+          <span>Tecnología</span>
+          <!-- 
+            <span>: Contenedor inline para el texto del botón.
+            Permite estilizar el texto independientemente si es necesario.
+          -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Icono de chevron (flecha hacia abajo) para indicar que es desplegable -->
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+
+        <button type="button" class="empleos-filter-button" data-filter="ubicacion">
+          <span>Ubicación</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+
+        <button type="button" class="empleos-filter-button" data-filter="tipo-contrato">
+          <span>Tipo de contrato</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+
+        <button type="button" class="empleos-filter-button" data-filter="experiencia">
+          <span>Años de experiencia</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PASO 4: SECCIÓN DE RESULTADOS -->
+    <!-- ============================================ -->
+    <section class="empleos-results-section">
+      <!-- 
+        <section>: Sección semántica para agrupar los resultados de búsqueda.
+        class="results-section": Clase para estilizar esta sección.
+      -->
+
+      <header class="empleos-results-header">
+        <!-- 
+          <header>: Dentro de una sección, representa el encabezado de esa sección.
+          No confundir con el <header> principal de la página.
+        -->
+        <h2>Resultados de búsqueda</h2>
+        <!-- Título de la sección de resultados -->
+      </header>
+
+      <!-- Contenedor de tarjetas de empleos -->
+      <div class="empleos-jobs-container">
+        <!-- 
+          <div>: Contenedor para las tarjetas de empleos.
+          class="jobs-container": Clase para crear el grid o layout de las tarjetas.
+        -->
+
+        <!-- Tarjeta de empleo 1 -->
+        <article class="empleos-job-card">
+          <!-- 
+            <article>: Elemento semántico HTML5 para contenido independiente y autocontenido.
+            Perfecto para tarjetas de empleos porque cada una es un "artículo" completo.
+          -->
+          <header class="empleos-job-card-header">
+            <!-- Encabezado de la tarjeta con título y empresa -->
+            <h3>Ingeniero de Software</h3>
+            <!-- 
+              <h3>: Título del puesto (nivel 3 en la jerarquía).
+              Es el título más importante dentro de cada tarjeta.
+            -->
+            <p class="company-info">Tech Solutions Inc. - Remoto</p>
+            <!-- 
+              <p>: Información de la empresa y ubicación.
+              class="company-info": Clase para estilizar esta información específicamente.
+            -->
+          </header>
+
+          <div class="empleos-job-card-body">
+            <!-- 
+              <div>: Cuerpo de la tarjeta (descripción).
+              class="job-card-body": Clase para el contenido principal de la tarjeta.
+            -->
+            <p>
+              Buscamos un ingeniero de software con experiencia en desarrollo web 
+              y conocimientos en JavaScript, React y Node.js. El candidato ideal 
+              debe ser capaz de trabajar en equipo y tener dotes sólidas de comunicación.
+            </p>
+            <!-- Descripción del empleo -->
+          </div>
+
+          <footer class="empleos-job-card-footer">
+            <!-- 
+              <footer>: Pie de la tarjeta (botón de acción).
+              Dentro de un <article>, representa información adicional o acciones.
+            -->
+            <button type="button" class="empleos-apply-button">
+              <!-- 
+                <button>: Botón para aplicar al empleo.
+                type="button": No envía formulario.
+                class="apply-button": Clase para estilizar el botón de aplicar.
+              -->
+              Aplicar
+            </button>
+          </footer>
+        </article>
+
+        <!-- Tarjeta de empleo 2 -->
+        <article class="empleos-job-card">
+          <header class="empleos-job-card-header">
+            <h3>Analista de Datos</h3>
+            <p class="company-info">Data Driven Co. - Remoto</p>
+          </header>
+
+          <div class="empleos-job-card-body">
+            <p>
+              Estamos buscando un analista de datos con experiencia en el análisis 
+              de grandes conjuntos de datos y herramientas de visualización. 
+              Se requiere conocimiento en SQL, Python y R.
+            </p>
+          </div>
+
+          <footer class="empleos-job-card-footer">
+            <button type="button" class="empleos-apply-button">Aplicar</button>
+          </footer>
+        </article>
+
+        <!-- Tarjeta de empleo 3 -->
+        <article class="empleos-job-card">
+          <header class="empleos-job-card-header">
+            <h3>Desarrollador de Aplicaciones Móviles</h3>
+            <p class="company-info">Mobile Apps Ltd. - Guadalajara</p>
+          </header>
+
+          <div class="empleos-job-card-body">
+            <p>
+              Buscamos un desarrollador de aplicaciones móviles con experiencia 
+              en iOS y/o Android. El candidato debe tener conocimientos de Swift, 
+              Kotlin y el desarrollo de interfaces de usuario.
+            </p>
+          </div>
+
+          <footer class="empleos-job-card-footer">
+            <button type="button" class="empleos-apply-button">Aplicar</button>
+          </footer>
+        </article>
+
+        <!-- Tarjeta de empleo 4 -->
+        <article class="empleos-job-card">
+          <header class="empleos-job-card-header">
+            <h3>Ingeniero de DevOps</h3>
+            <p class="company-info">Cloud Services Corp. - Remoto</p>
+          </header>
+
+          <div class="empleos-job-card-body">
+            <p>
+              Buscamos un Ingeniero de DevOps con experiencia en la gestión de 
+              infraestructuras en la nube, administración de sistemas y herramientas 
+              de integración continua. Se requiere conocimiento en AWS, Azure o GCP.
+            </p>
+          </div>
+
+          <footer class="empleos-job-card-footer">
+            <button type="button" class="empleos-apply-button">Aplicar</button>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PASO 5: PAGINACIÓN -->
+    <!-- ============================================ -->
+    <nav class="empleos-pagination" aria-label="Navegación de páginas">
+      <!-- 
+        <nav>: Elemento semántico para navegación.
+        class="pagination": Clase específica para la paginación.
+        aria-label: Describe el propósito de esta navegación.
+      -->
+      <button type="button" class="empleos-pagination-button" aria-label="Página anterior" disabled>
+        <!-- 
+          <button>: Botón para ir a la página anterior.
+          disabled: Deshabilitado porque estamos en la primera página.
+          aria-label: Descripción para accesibilidad.
+        -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Icono de flecha hacia la izquierda -->
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="empleos-pagination-numbers">
+        <!-- 
+          <div>: Contenedor para los números de página.
+          class="pagination-numbers": Clase para estilizar los números.
+        -->
+        <a href="#" class="empleos-pagination-number active" aria-label="Página 1" aria-current="page">1</a>
+        <!-- 
+          <a>: Enlace a una página específica.
+          class="empleos-pagination-number active": Clase para el número activo (página actual).
+          aria-current="page": Indica que esta es la página actual (accesibilidad).
+        -->
+        <a href="#" class="empleos-pagination-number" aria-label="Página 2">2</a>
+        <a href="#" class="empleos-pagination-number" aria-label="Página 3">3</a>
+        <a href="#" class="empleos-pagination-number" aria-label="Página 4">4</a>
+        <a href="#" class="empleos-pagination-number" aria-label="Página 5">5</a>
+        
+        <span class="empleos-pagination-ellipsis" aria-hidden="true">...</span>
+        <!-- 
+          <span>: Elemento decorativo para los puntos suspensivos.
+          aria-hidden="true": Oculta de lectores de pantalla (es solo decorativo).
+        -->
+      </div>
+
+      <button type="button" class="empleos-pagination-button" aria-label="Página siguiente">
+        <!-- Botón para ir a la página siguiente -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Icono de flecha hacia la derecha -->
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </nav>
+
+  </main>
+
+  <!-- ============================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================ -->
+  <footer id="contacto">
+    <!-- 
+      <footer>: Elemento semántico HTML5 para el pie de página.
+      id="contacto": ID para enlaces internos (como el del header en index.html).
+    -->
+    <small>© 2025 TalentDev. Todos los derechos reservados.</small>
+    <!-- 
+      <small>: Elemento semántico para texto de tamaño pequeño o información legal.
+      Perfecto para copyrights y avisos legales.
+    -->
+  </footer>
+
+</body>
+</html>

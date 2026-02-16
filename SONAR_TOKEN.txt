@@ -1,0 +1,10 @@
+SONAR_TOKEN
+5aa0e373849149669c2840cc8d155ce9bafbe3f6
+
+vercel: hosting
+framwork web: astro
+backen: supabase, base de datos, autenticación y crea api
+pnpm : como administrador de paquetes 
+editor de código: windsurf
+cloudflare: para proteger de ataques de ddos
+cloude sonnet 4: para código 
