@@ -136,9 +136,76 @@
         </footer>
       </div>
     </section>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN DE CONTACTO -->
+    <!-- ============================================ -->
+    <section id="contacto" class="index-contacto-section">
+      <h2>¿Cómo podemos ayudarte?</h2>
+      <p class="index-contacto-intro">
+        Escríbenos y te responderemos en menos de 24 horas.
+      </p>
+
+      <div class="index-contacto-content">
+        <div class="index-contacto-info">
+          <h3>Datos de contacto</h3>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:contacto@talentdev.com">contacto@talentdev.com</a>
+          </p>
+          <p>
+            <strong>Horario:</strong> Lunes a Viernes, 9:00 - 18:00
+          </p>
+        </div>
+
+        <form class="index-contacto-form" action="#" method="get">
+          <label for="contacto-nombre">Nombre</label>
+          <input
+            type="text"
+            id="contacto-nombre"
+            name="nombre"
+            required
+            placeholder="Tu nombre"
+          >
+
+          <label for="contacto-email">Email</label>
+          <input
+            type="email"
+            id="contacto-email"
+            name="email"
+            required
+            placeholder="tu@email.com"
+          >
+
+          <label for="contacto-asunto">Asunto</label>
+          <select id="contacto-asunto" name="asunto" required>
+            <option value="">Selecciona una opción</option>
+            <option value="candidato">Candidato buscando empleo</option>
+            <option value="empresa">Empresa que quiere publicar vacantes</option>
+            <option value="soporte">Soporte técnico</option>
+            <option value="otro">Otro</option>
+          </select>
+
+          <label for="contacto-mensaje">Mensaje</label>
+          <textarea
+            id="contacto-mensaje"
+            name="mensaje"
+            rows="5"
+            required
+            placeholder="Escribe tu mensaje..."
+          ></textarea>
+
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+
+      <p class="index-contacto-privacidad">
+        Protegemos tu información. No compartimos tus datos con terceros.
+      </p>
+    </section>
   </main>
 
-  <footer id="contacto">
+  <footer >
     <small>© 2025 TalentDev. Todos los derechos reservados.</small>
   </footer>
 
@@ -221,6 +288,7 @@
   <!-- JAVASCRIPT PARA EL MODAL -->
   <!-- ============================================ -->
   <script src="video-modal.js" defer></script>
+  <script src="contacto.js" defer></script>
   <!-- 
     <script>: Etiqueta para incluir código JavaScript externo.
     src="video-modal.js": Ruta al archivo JavaScript.

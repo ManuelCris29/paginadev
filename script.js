@@ -14,7 +14,7 @@ botonesAplicar.forEach(boton => {
 
 const jobsListingSection = document.querySelector('.empleos-jobs-container')
 
-jobsListingSection.addEventListener('click', function(event) {
+jobsListingSection?.addEventListener('click', function(event) {
   const element=event.target;
   if (element.classList.contains('empleos-apply-button')) {
     element.textContent = 'Aplicado';

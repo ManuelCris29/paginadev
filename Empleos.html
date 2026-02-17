@@ -278,37 +278,39 @@
         -->
 
         <!-- Tarjeta de empleo 1 -->
-        <article class="empleos-job-card">
+        <article class="empleos-job-card" data-job-id="1">
           <!-- 
             <article>: Elemento semántico HTML5 para contenido independiente y autocontenido.
             Perfecto para tarjetas de empleos porque cada una es un "artículo" completo.
           -->
-          <header class="empleos-job-card-header">
-            <!-- Encabezado de la tarjeta con título y empresa -->
-            <h3>Ingeniero de Software</h3>
-            <!-- 
-              <h3>: Título del puesto (nivel 3 en la jerarquía).
-              Es el título más importante dentro de cada tarjeta.
-            -->
-            <p class="company-info">Tech Solutions Inc. - Remoto</p>
-            <!-- 
-              <p>: Información de la empresa y ubicación.
-              class="company-info": Clase para estilizar esta información específicamente.
-            -->
-          </header>
+          <a href="descriempleo.html?id=1" class="empleos-job-card-link">
+            <header class="empleos-job-card-header">
+              <!-- Encabezado de la tarjeta con título y empresa -->
+              <h3>Ingeniero de Software</h3>
+              <!-- 
+                <h3>: Título del puesto (nivel 3 en la jerarquía).
+                Es el título más importante dentro de cada tarjeta.
+              -->
+              <p class="company-info">Tech Solutions Inc. - Remoto</p>
+              <!-- 
+                <p>: Información de la empresa y ubicación.
+                class="company-info": Clase para estilizar esta información específicamente.
+              -->
+            </header>
 
-          <div class="empleos-job-card-body">
-            <!-- 
-              <div>: Cuerpo de la tarjeta (descripción).
-              class="job-card-body": Clase para el contenido principal de la tarjeta.
-            -->
-            <p>
-              Buscamos un ingeniero de software con experiencia en desarrollo web 
-              y conocimientos en JavaScript, React y Node.js. El candidato ideal 
-              debe ser capaz de trabajar en equipo y tener dotes sólidas de comunicación.
-            </p>
-            <!-- Descripción del empleo -->
-          </div>
+            <div class="empleos-job-card-body">
+              <!-- 
+                <div>: Cuerpo de la tarjeta (descripción).
+                class="job-card-body": Clase para el contenido principal de la tarjeta.
+              -->
+              <p>
+                Buscamos un ingeniero de software con experiencia en desarrollo web 
+                y conocimientos en JavaScript, React y Node.js. El candidato ideal 
+                debe ser capaz de trabajar en equipo y tener dotes sólidas de comunicación.
+              </p>
+              <!-- Descripción del empleo -->
+            </div>
+          </a>
 
           <footer class="empleos-job-card-footer">
             <!-- 
@@ -327,19 +329,21 @@
         </article>
 
         <!-- Tarjeta de empleo 2 -->
-        <article class="empleos-job-card">
-          <header class="empleos-job-card-header">
-            <h3>Analista de Datos</h3>
-            <p class="company-info">Data Driven Co. - Remoto</p>
-          </header>
+        <article class="empleos-job-card" data-job-id="2">
+          <a href="descriempleo.html?id=2" class="empleos-job-card-link">
+            <header class="empleos-job-card-header">
+              <h3>Analista de Datos</h3>
+              <p class="company-info">Data Driven Co. - Remoto</p>
+            </header>
 
-          <div class="empleos-job-card-body">
-            <p>
-              Estamos buscando un analista de datos con experiencia en el análisis 
-              de grandes conjuntos de datos y herramientas de visualización. 
-              Se requiere conocimiento en SQL, Python y R.
-            </p>
-          </div>
+            <div class="empleos-job-card-body">
+              <p>
+                Estamos buscando un analista de datos con experiencia en el análisis 
+                de grandes conjuntos de datos y herramientas de visualización. 
+                Se requiere conocimiento en SQL, Python y R.
+              </p>
+            </div>
+          </a>
 
           <footer class="empleos-job-card-footer">
             <button type="button" class="empleos-apply-button">Aplicar</button>
@@ -347,19 +351,21 @@
         </article>
 
         <!-- Tarjeta de empleo 3 -->
-        <article class="empleos-job-card">
-          <header class="empleos-job-card-header">
-            <h3>Desarrollador de Aplicaciones Móviles</h3>
-            <p class="company-info">Mobile Apps Ltd. - Guadalajara</p>
-          </header>
+        <article class="empleos-job-card" data-job-id="3">
+          <a href="descriempleo.html?id=3" class="empleos-job-card-link">
+            <header class="empleos-job-card-header">
+              <h3>Desarrollador de Aplicaciones Móviles</h3>
+              <p class="company-info">Mobile Apps Ltd. - Guadalajara</p>
+            </header>
 
-          <div class="empleos-job-card-body">
-            <p>
-              Buscamos un desarrollador de aplicaciones móviles con experiencia 
-              en iOS y/o Android. El candidato debe tener conocimientos de Swift, 
-              Kotlin y el desarrollo de interfaces de usuario.
-            </p>
-          </div>
+            <div class="empleos-job-card-body">
+              <p>
+                Buscamos un desarrollador de aplicaciones móviles con experiencia 
+                en iOS y/o Android. El candidato debe tener conocimientos de Swift, 
+                Kotlin y el desarrollo de interfaces de usuario.
+              </p>
+            </div>
+          </a>
 
           <footer class="empleos-job-card-footer">
             <button type="button" class="empleos-apply-button">Aplicar</button>
@@ -367,19 +373,21 @@
         </article>
 
         <!-- Tarjeta de empleo 4 -->
-        <article class="empleos-job-card">
-          <header class="empleos-job-card-header">
-            <h3>Ingeniero de DevOps</h3>
-            <p class="company-info">Cloud Services Corp. - Remoto</p>
-          </header>
+        <article class="empleos-job-card" data-job-id="4">
+          <a href="descriempleo.html?id=4" class="empleos-job-card-link">
+            <header class="empleos-job-card-header">
+              <h3>Ingeniero de DevOps</h3>
+              <p class="company-info">Cloud Services Corp. - Remoto</p>
+            </header>
 
-          <div class="empleos-job-card-body">
-            <p>
-              Buscamos un Ingeniero de DevOps con experiencia en la gestión de 
-              infraestructuras en la nube, administración de sistemas y herramientas 
-              de integración continua. Se requiere conocimiento en AWS, Azure o GCP.
-            </p>
-          </div>
+            <div class="empleos-job-card-body">
+              <p>
+                Buscamos un Ingeniero de DevOps con experiencia en la gestión de 
+                infraestructuras en la nube, administración de sistemas y herramientas 
+                de integración continua. Se requiere conocimiento en AWS, Azure o GCP.
+              </p>
+            </div>
+          </a>
 
           <footer class="empleos-job-card-footer">
             <button type="button" class="empleos-apply-button">Aplicar</button>

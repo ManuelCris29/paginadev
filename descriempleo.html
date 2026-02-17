@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalles de la Oferta - TalentDev</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <div class="logo-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M7 8l-4 4l4 4" />
+          <path d="M17 8l4 4l-4 4" />
+          <path d="M14 4l-4 16" />
+        </svg>
+        <h1>TalentDev</h1>
+      </div>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <a href="Empleos.html">Empleos</a>
+      <a href="#">Empresas</a>
+      <a href="#">Salarios</a>
+    </nav>
+
+    <button type="button" class="profile-button" aria-label="Abrir menú de perfil">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="8" r="5"></circle>
+        <path d="M20 21a8 8 0 0 0-16 0"></path>
+      </svg>
+    </button>
+  </header>
+
+  <main class="descriempleo-main">
+    <!-- Breadcrumbs -->
+    <nav class="descriempleo-breadcrumbs" aria-label="Ruta de navegación">
+      <a href="index.html">Inicio</a>
+      <span class="descriempleo-breadcrumb-sep" aria-hidden="true">&gt;</span>
+      <a href="Empleos.html">Empleos</a>
+      <span class="descriempleo-breadcrumb-sep" aria-hidden="true">&gt;</span>
+      <span class="descriempleo-breadcrumb-current" id="breadcrumb-title">Cargando...</span>
+    </nav>
+
+    <article class="descriempleo-article" id="job-detail">
+      <!-- Encabezado del puesto -->
+      <header class="descriempleo-header">
+        <div class="descriempleo-header-content">
+          <h1 class="descriempleo-title" id="job-title">Cargando...</h1>
+          <p class="descriempleo-company-location" id="job-company">Cargando...</p>
+        </div>
+        <button type="button" class="descriempleo-apply-btn" id="apply-btn-header">Aplicar Ahora</button>
+      </header>
+
+      <!-- Descripción del puesto -->
+      <section class="descriempleo-section">
+        <h2>Descripción del puesto</h2>
+        <p id="job-description" class="descriempleo-text">Cargando...</p>
+      </section>
+
+      <!-- Responsabilidades -->
+      <section class="descriempleo-section">
+        <h2>Responsabilidades</h2>
+        <ul class="descriempleo-list" id="job-responsibilities">
+          <li>Cargando...</li>
+        </ul>
+      </section>
+
+      <!-- Requisitos -->
+      <section class="descriempleo-section">
+        <h2>Requisitos</h2>
+        <ul class="descriempleo-list" id="job-requirements">
+          <li>Cargando...</li>
+        </ul>
+      </section>
+
+      <!-- Acerca de la empresa -->
+      <section class="descriempleo-section">
+        <h2>Acerca de la empresa</h2>
+        <p id="job-about" class="descriempleo-text">Cargando...</p>
+      </section>
+
+      <!-- Botón aplicar al final -->
+      <div class="descriempleo-apply-bottom">
+        <button type="button" class="descriempleo-apply-btn" id="apply-btn-footer">Aplicar Ahora</button>
+      </div>
+    </article>
+  </main>
+
+  <footer id="contacto">
+    <small>© 2025 TalentDev. Todos los derechos reservados.</small>
+  </footer>
+
+  <script src="descriempleo.js" type="module"></script>
+</body>
+</html>
